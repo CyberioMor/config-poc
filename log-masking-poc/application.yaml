@@ -1,0 +1,8 @@
+log:
+  masking:
+    - pattern: "/\"(.*?citizen(?:.*?id|.*?))\".*?:.*?\"((\d{9})(\d{4}))\"/gi"
+      masking-group: 3
+      masking: "XXXXXXXXX"
+    - pattern: "/\"(.*?citizen(?:.*?id|.*?))\".*?:.*?\"((\d{1}-\d{4}-\d{4})(\d{1}-\d{2}-\d{1}))\"/gi"
+      masking-group: 3
+      masking: "X-XXXX-XXXX"

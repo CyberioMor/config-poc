@@ -1,11 +1,8 @@
 log:
   masking:
-    - pattern: "/\"(.*?citizen(?:.*?id|.*?))\".*?:.*?\"((\\d{9})(\\d{4}))\"/gi"
+    - pattern: "(?i)\"(.*?citizen(?:.*?))\".*?:.*?\"((\\d{9})(\\d{4}))\""
       masking-group: 3
       masking: "XXXXXXXXX"
-    - pattern: "/\"(.*?citizen(?:.*?id|.*?))\".*?:.*?\"((\\d{1}-\\d{4}-\\d{4})(\\d{1}-\\d{2}-\\d{1}))\"/gi"
+    - pattern: "(?i)\"(.*?citizen(?:.*?))\".*?:.*?\"((\\d{1}-\\d{4}-\\d{4})(\\d{1}-\\d{2}-\\d{1}))\""
       masking-group: 3
       masking: "X-XXXX-XXXX"
-    - pattern: "Test"
-      masking-group: 1
-      masking: "X"
